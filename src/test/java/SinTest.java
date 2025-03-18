@@ -7,12 +7,11 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class SinTest extends Conditionals
-{
+public class SinTest extends Conditionals {
     @Execution(ExecutionMode.CONCURRENT)
     @ParameterizedTest
     @CsvSource({"1.0, 0.8415", "0.5, 0.4794"})
-    public void testSinOfDoubles(double a, double exp){
+    public void testSinOfDoubles(double a, double exp) {
         assertEquals(exp, calculator.sin(a), 0.0001);
     }
 

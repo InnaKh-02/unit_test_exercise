@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class ScreenshotUtil {
-    public static void deleteScreenShots(){
+    public static void deleteScreenShots() {
         File folder = new File("screenshots");
         if (folder.exists() && folder.isDirectory()) {
             for (File file : folder.listFiles()) {
@@ -12,8 +12,8 @@ public class ScreenshotUtil {
             }
         }
     }
-    public static void takeScreenshot()
-    {
+
+    public static void takeScreenshot() {
         try {
             Thread.sleep(500);
             Robot robot = new Robot();

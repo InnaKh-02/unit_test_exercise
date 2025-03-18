@@ -6,12 +6,11 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TgTest extends Conditionals
-{
+public class TgTest extends Conditionals {
     @Execution(ExecutionMode.CONCURRENT)
     @ParameterizedTest
     @CsvSource({"1.047, 1.732", "0.524, 0.577"})
-    public void testTgOfDoubles(double a, double exp){
+    public void testTgOfDoubles(double a, double exp) {
         assertEquals(exp, calculator.tg(a), 0.001);
     }
 
